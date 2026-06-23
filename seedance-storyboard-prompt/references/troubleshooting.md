@@ -20,6 +20,9 @@ Add:
 If reference images exist, specify:
 `@角色 的脸部参考@图片1，服装参考@图片2。`
 
+If using Seedance 2.0 multimodal references, make the material role explicit:
+`@图片1 作为@角色外观参考，@视频1 只参考动作节奏和运镜，不改变@角色身份。`
+
 ## Duplicate Character / Twins
 
 Add:
@@ -50,3 +53,27 @@ Add stronger anchors:
 - repeated visual motif
 - scale comparison
 - environmental texture
+
+## Continuity Depends on Previous Shot
+
+Do not write `承接上一镜` in the final prompt. Restate the actual visual relationship:
+
+- camera is behind / beside / above which character
+- what is in foreground and background
+- where each character is looking
+- what action starts the shot
+- what object or body part anchors continuity
+
+If a single prompt mixes too many spatial actions, split it into separate shots.
+
+## Multimodal Reference Confusion
+
+When output ignores or mixes up uploaded material roles:
+
+- add a material map before the prompt
+- repeat the role near the relevant action
+- avoid ambiguous pronouns
+- specify whether a source controls appearance, action, camera movement, style, sound, or timing
+
+Example:
+`@图片1 控制主体1外观；@视频1 只控制打斗动作和镜头节奏；@音频1 只控制音乐卡点，不改变画面主体。`

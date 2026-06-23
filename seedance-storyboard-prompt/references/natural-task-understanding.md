@@ -35,6 +35,7 @@ After reading the user's message, decide whether the task is one or more of:
 
 - Add a file to the knowledge base.
 - Add a web page to the knowledge base.
+- Compare a provided source package against the current skill and integrate only non-duplicative reusable rules.
 - Search the knowledge base and answer with evidence.
 - Diagnose generated-video problems.
 - Revise an existing prompt.
@@ -54,7 +55,7 @@ For Seedance prompt diagnosis, generation feedback, or claims about best practic
 2. Nearby scenes or previous/next shots if provided.
 3. Uploaded files or project docs.
 4. `docs/MANIFEST.md`, `docs/sources/`, `docs/web/`, `docs/cases/` when working in a Codex-style project.
-5. Bundled references.
+5. Bundled references, especially `source-manifest.md`, `source-library-workflow.md`, and `seedance-2-multimodal.md` when the task relates to source provenance, docs ingestion, or Seedance 2.0 multimodal behavior.
 6. Web search only when the user asks for current public documentation or the fact may have changed.
 
 Every important recommendation should be labeled as:
@@ -93,6 +94,14 @@ If the user says `这个文档加进去，以后遇到声音问题要参考`, tr
 4. Update the manifest or index.
 5. Tell the user where it was saved and when it should be used.
 
+If the user says `整合到 GitHub / 整合到 skill / 对比整合，不是覆盖`, treat it as a source integration task:
+
+1. Inspect the provided files.
+2. Compare them with existing `SKILL.md` and `references/`.
+3. Add only reusable missing rules.
+4. Update the source manifest.
+5. Avoid raw duplication of full manuals, large image exports, nested skill zips, and generated outputs.
+
 ## Example: Add Web Page
 
 If the user says `这个网页也加入资料库`, treat it as a web ingestion task:
@@ -119,6 +128,7 @@ Use the user's requested format. When the user does not specify a format:
 
 - For added documents: return saved location, summary, manifest update, and future usage.
 - For web pages: return fetch status, saved location, extracted rules, and future usage.
+- For integrated source packages: return source families reviewed, files changed, key new rules, and what was intentionally not copied.
 - For feedback: return diagnosis, evidence, reasoning, repair plan, and revised prompt.
 - For pad images: return 场景档案 + English Prompt + Negative.
 - For storyboard generation: return 分镜表格版 + 最终可复制 Prompt 版.

@@ -18,6 +18,9 @@ Before answering, inspect available information sources in this priority order:
    - `docs/web/`
    - `docs/cases/`
 4. Bundled skill references.
+   - `references/source-manifest.md` for already integrated source provenance.
+   - `references/source-library-workflow.md` for knowledge-base behavior.
+   - `references/seedance-2-multimodal.md` for Seedance 2.0 multimodal rules.
 5. Web search only when the user requests latest public documentation or the fact may have changed.
 
 If a source cannot be accessed, state that limitation clearly.
@@ -65,3 +68,20 @@ If no direct file evidence exists, write:
 `未找到直接资料依据；以下为基于当前内容、AI 推理和生成经验的判断。`
 
 Then label the recommendation as 【当前内容依据】, 【AI 推理判断】, or 【经验优化建议】.
+
+## Final Prompt Boundary
+
+Keep evidence language outside the final video prompt. The diagnostic report may say `根据资料` or `当前内容依据`, but the final prompt must only contain executable scene, shot, subject, action, sound, and restriction descriptions.
+
+Do not put these into final prompts:
+
+- `承接上一镜`
+- `承接 SC_x_x`
+- `参考前文`
+- `根据官方指南`
+- `资料明确依据`
+- `当前内容依据`
+- `AI 推理判断`
+- `经验优化建议`
+
+Rewrite them into visible information for the current clip.

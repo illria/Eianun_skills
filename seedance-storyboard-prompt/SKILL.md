@@ -23,7 +23,7 @@ When the user says things like `这个文档加进去`, `这个网页也参考`,
 
 Before giving source-backed advice, inspect available materials first. Separate recommendations into 【资料明确依据】, 【当前内容依据】, 【AI 推理判断】, and 【经验优化建议】. Never present reasoning or experience as document facts.
 
-For details and examples, consult `references/natural-task-understanding.md`.
+For details and examples, consult `references/natural-task-understanding.md`. For source-library behavior and integrated source provenance, consult `references/source-library-workflow.md` and `references/source-manifest.md`.
 
 ## Default Workflow
 
@@ -47,10 +47,16 @@ Evidence mode workflow:
 
 - `references/natural-task-understanding.md`: natural-language task understanding and autonomous judgment workflow.
 - `references/evidence-mode.md`: evidence-backed diagnosis format and source labeling.
+- `references/source-library-workflow.md`: how to add/search project sources, update source manifests, and keep final prompts self-contained.
+- `references/source-manifest.md`: distilled index of user-provided Seedance source materials already integrated into this skill.
+- `references/seedance-2-multimodal.md`: Seedance 2.0 multimodal input limits, reference-role writing, and multimodal task patterns.
 - `references/output-formats.md`: storyboard table and final prompt structures.
 - `references/pad-image-prompts.md`: pad-image extraction format.
 - `references/dialogue-translation.md`: Chinese-to-English dialogue rules.
 - `references/troubleshooting.md`: common Seedance prompt repair patterns.
+- `scripts/search_docs.py`: optional keyword search over project `docs/` and bundled references.
+- `scripts/ingest_file.py`: optional local-file ingestion into a Codex-style `docs/` knowledge base.
+- `scripts/ingest_url.py`: optional webpage ingestion into `docs/web/` when network access is available.
 
 ## Mode Routing
 
@@ -103,6 +109,19 @@ In this mode:
 - Separate source-backed facts from current-content observations, AI reasoning, and creative experience.
 - If no relevant document is found, say `未找到直接资料依据` and continue with clearly labeled inference or experience.
 
+### Source Library / Knowledge Ingestion Mode
+
+Use when the user gives a PDF, DOCX, TXT, Markdown file, zip export, webpage, or project folder and says it should be added, remembered, referenced later, compared, merged, or used as evidence.
+
+In this mode:
+- Inspect the provided source before editing skill files.
+- Compare with existing `references/` and integrate only reusable, non-duplicative rules.
+- Do not overwrite existing references unless the user explicitly asks.
+- Do not add raw large archives, generated media, or full manuals when a distilled reference is enough.
+- Update `references/source-manifest.md` when a new source family is integrated.
+- Report what was integrated, what was intentionally not copied, and which files changed.
+- When working in a project knowledge base rather than this skill repository, use `scripts/ingest_file.py`, `scripts/ingest_url.py`, or `scripts/search_docs.py` as support tools if appropriate.
+
 ### Storyboard Pad-Image Mode (垫图模式)
 
 Use when the user asks for any of the following:
@@ -122,6 +141,16 @@ In this mode:
 - Default to a `场景档案 + Prompt + Negative` package unless the user asks for another format.
 - Treat the pad image as a support asset for later video generation, not as the final video prompt itself.
 - If the target is a character, prop, or statue from an existing scene, preserve its identity, material, emotional state, and core visual contrast.
+
+### Seedance 2.0 Multimodal Mode
+
+Use when the user mentions Seedance 2.0, 即梦, 全能参考, 首尾帧, `@图片`, `@视频`, `@音频`, multiple reference materials, extension, video editing, music beat matching, one-take shots, or multimodal prompt planning.
+
+In this mode:
+- Load `references/seedance-2-multimodal.md`.
+- Assign every referenced material a clear role before writing the final prompt.
+- Prefer explicit material maps over vague references.
+- Warn about reviewed limits or realistic human-face upload restrictions when relevant.
 
 ## Information Check
 
@@ -150,6 +179,7 @@ Rules:
 - If the user gives a shot structure, preserve it unless asked to simplify.
 - If the user gives `@character`, `@prop`, or `@scene` labels, keep those exact references.
 - If the user asks for a final copyable prompt, keep that prompt clean and production-ready.
+- Final prompts must be self-contained for the video model. Do not write `承接上一镜`, `承接 SC_x_x`, `参考前文`, `根据资料`, evidence labels, or diagnosis language inside the final prompt. Translate those ideas into concrete visible scene layout, character positions, actions, and timing.
 
 ## Dialogue Translation Rules
 

@@ -124,6 +124,75 @@ $seedance-storyboard-prompt 证据模式
 
 如果没有可读资料，它会明确说没有直接文件依据，不会把经验判断伪装成资料结论。
 
+## 4.1 资料库 / 来源整合
+
+当你给新的 PDF、zip、网页、项目包或手册时，可以说：
+
+```text
+$seedance-storyboard-prompt
+
+这是 Seedance 的补充资料。
+请和当前 GitHub 里的 skill 对比整合：
+1. 不要覆盖现有文件
+2. 不要原样复制大文件
+3. 只抽取可复用规则
+4. 更新资料来源索引
+5. 告诉我改了哪些文件
+```
+
+整合时会优先更新：
+
+- `references/source-manifest.md`
+- `references/source-library-workflow.md`
+- `references/seedance-2-multimodal.md`
+- 和已有的 evidence / output / troubleshooting 规则
+
+如果只是想在某个项目中长期保存资料，推荐项目里建立：
+
+```text
+docs/MANIFEST.md
+docs/sources/
+docs/web/
+docs/cases/
+```
+
+新增资料后说：
+
+```text
+把这个文档加入资料库，更新 MANIFEST，以后遇到声音、字幕、水印、人物漂移问题时优先参考。
+```
+
+也可以用脚本：
+
+```bash
+python3 seedance-storyboard-prompt/scripts/ingest_file.py path/to/source.pdf --root . --kind sources
+python3 seedance-storyboard-prompt/scripts/search_docs.py 字幕 水印 人物漂移 --root .
+```
+
+## 4.2 Seedance 2.0 多模态提示词
+
+当你有图片、视频、音频参考时，不要只堆素材名。给每个素材分配角色：
+
+```text
+$seedance-storyboard-prompt
+
+使用 Seedance 2.0 全能参考模式。
+素材映射：
+@图片1 = 主体外观
+@图片2 = 场景空间
+@视频1 = 动作节奏和运镜
+@音频1 = 音乐卡点
+
+目标：生成 10 秒一镜到底视频。
+要求：输出可直接复制的 Seedance Prompt。
+```
+
+如果只是首帧/尾帧控制，可以说：
+
+```text
+@图片1 作为首帧，@图片2 作为尾帧，中间生成角色从门口走到窗边的连续动作。
+```
+
 ## 5. 推荐输入信息
 
 越具体越稳：
@@ -176,4 +245,29 @@ SC_3_6 和 SC_3_7 接不上，帮我强化动作和空间连续性。
 
 ```text
 先给分镜表格，不要急着合成最终 Prompt。
+```
+
+## 8. 最终 Prompt 自包含
+
+最终给 Seedance 的 Prompt 不要写：
+
+- 承接上一镜
+- 承接 SC_3_6
+- 参考前文
+- 根据资料
+- 当前内容依据
+- AI 推理判断
+
+要把这些改成模型能直接执行的画面信息。
+
+错误：
+
+```text
+承接 SC_3_6 镜头C，保持莉迪亚背后视角。
+```
+
+正确：
+
+```text
+镜头位于@莉迪亚身后偏侧位置，画面前景只见@莉迪亚的肩背、半侧脸轮廓与按在腹部附近的手；画面前方是@美杜莎背对镜头端坐在@钢刃王座上的背影。
 ```
