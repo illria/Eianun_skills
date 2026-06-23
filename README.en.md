@@ -20,9 +20,9 @@ It currently includes personal Skills for Chinese AI-tool copywriting, YouTube t
 
 | Skill | Description | Entry |
 |---|---|---|
-| `ai-tool-viral-post-writer` | Chinese X/Twitter viral copywriting for AI tools and GitHub projects | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) |
-| `youtube-thumbnail-producer-codex-v4` | Chinese YouTube title and thumbnail production workflow | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) |
-| `seedance-storyboard-prompt` | Seedance storyboard prompts, pad-image prompts, diagnostics, and revisions | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) |
+| `ai-tool-viral-post-writer` | Chinese X/Twitter viral copywriting for AI tools and GitHub projects | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) · [Usage](./ai-tool-viral-post-writer/USAGE.md) |
+| `youtube-thumbnail-producer-codex-v4` | Chinese YouTube title and thumbnail production workflow | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) · [Usage](./youtube-thumbnail-producer-codex-v4/USAGE.md) |
+| `seedance-storyboard-prompt` | Seedance storyboard prompts, pad-image prompts, diagnostics, and revisions | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) · [Usage](./seedance-storyboard-prompt/USAGE.md) |
 
 ## Install
 

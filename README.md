@@ -31,9 +31,9 @@
 
 | Skill | 一句话 | 入口 |
 |---|---|---|
-| `ai-tool-viral-post-writer` | 中文 X/Twitter AI 工具爆款文案生成与案例库维护 | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) |
-| `youtube-thumbnail-producer-codex-v4` | 中文 YouTube 标题与高点击缩略图生成工作流 | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) |
-| `seedance-storyboard-prompt` | Seedance 分镜提示词、垫图描述、反馈诊断与修订 | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) |
+| `ai-tool-viral-post-writer` | 中文 X/Twitter AI 工具爆款文案生成与案例库维护 | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) · [使用说明](./ai-tool-viral-post-writer/USAGE.md) |
+| `youtube-thumbnail-producer-codex-v4` | 中文 YouTube 标题与高点击缩略图生成工作流 | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) · [使用说明](./youtube-thumbnail-producer-codex-v4/USAGE.md) |
+| `seedance-storyboard-prompt` | Seedance 分镜提示词、垫图描述、反馈诊断与修订 | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) · [使用说明](./seedance-storyboard-prompt/USAGE.md) |
 
 ---
 
@@ -132,6 +132,7 @@ $ai-tool-viral-post-writer 更新素材库：
 - [素材库](./ai-tool-viral-post-writer/references/case_library.md)
 - [事实与风险边界](./ai-tool-viral-post-writer/references/claim_safety.md)
 - [配图策略](./ai-tool-viral-post-writer/references/visual_brief.md)
+- [使用说明](./ai-tool-viral-post-writer/USAGE.md)
 
 ### youtube-thumbnail-producer-codex-v4
 
@@ -149,6 +150,7 @@ $ai-tool-viral-post-writer 更新素材库：
 
 - [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md)
 - [README](./youtube-thumbnail-producer-codex-v4/README.md)
+- [使用说明](./youtube-thumbnail-producer-codex-v4/USAGE.md)
 
 ### seedance-storyboard-prompt
 
@@ -165,6 +167,7 @@ $ai-tool-viral-post-writer 更新素材库：
 入口：
 
 - [SKILL.md](./seedance-storyboard-prompt/SKILL.md)
+- [使用说明](./seedance-storyboard-prompt/USAGE.md)
 - [使用指南](./seedance-storyboard-prompt/USAGE_GUIDE.md)
 
 ## 开发与校验
