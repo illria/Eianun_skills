@@ -1,0 +1,29 @@
+{
+  "video_topic": "Wise mainland account opening",
+  "audience": "mainland beginners",
+  "selected_title": "Wise mainland account opening full guide | zero threshold overseas banking tool",
+  "title_bucket": "tutorial",
+  "keywords": ["Wise", "mainland", "overseas bank", "tutorial"],
+  "user_angle": "clear beginner guide with fees and usage scenarios",
+  "thumbnail": {
+    "main_text": "Wise\u5f00\u6237",
+    "secondary_text": "\u5927\u96460\u95e8\u69db",
+    "badge_text": "2026\u65b0\u7248",
+    "support_text": "\u8de8\u5883\u8d44\u91d1\u5de5\u5177",
+    "language": "zh-CN",
+    "visual_focal_object": "green app card, debit card, phone banking interface",
+    "brand_logos": ["Wise"],
+    "color_direction": "green, deep navy, white, neon accent",
+    "composition": "left-text-right-product",
+    "mood": "premium, clear, high-trust, punchy"
+  },
+  "image_generation": {
+    "mode": "codex-native",
+    "aspect_ratio": "16:9",
+    "size": "1280x720",
+    "style_reference_assets": ["assets/style_references/user-example-grid-1.png"],
+    "must_include": ["large Chinese text", "brand/product visual", "high contrast"],
+    "avoid": ["bottom red progress bar", "tiny text", "flat template look"]
+  },
+  "revision_history": []
+}

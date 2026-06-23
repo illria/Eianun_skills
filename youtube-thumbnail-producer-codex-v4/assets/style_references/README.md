@@ -1,0 +1,1 @@
+These images are user-provided example grids. Use them as style references for typography density, color blocking, and Chinese tutorial thumbnail composition. Do not copy another creator's exact layout or artwork.

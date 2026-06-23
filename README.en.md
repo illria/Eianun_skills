@@ -6,7 +6,7 @@
 
 #### Personal Agent Skills collection
 
-[![Skills](https://img.shields.io/badge/Skills-4-10B981?style=for-the-badge)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-5-10B981?style=for-the-badge)](#skills)
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-3B82F6?style=for-the-badge)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](./LICENSE)
 
@@ -14,13 +14,14 @@
 
 This repository contains installable Skills for Codex, Claude Code, OpenCode, OpenClaw, Hermes, and other Agent environments that support the Agent Skills format.
 
-It currently includes personal Skills for Chinese AI-tool copywriting, Seedance storyboard prompts, PDF workflows, and Playwright browser automation. Each Skill is an independent directory and can be installed separately.
+It currently includes personal Skills for Chinese AI-tool copywriting, YouTube thumbnail production, Seedance storyboard prompts, PDF workflows, and Playwright browser automation. Each Skill is an independent directory and can be installed separately.
 
 ## Skills
 
 | Skill | Description | Entry |
 |---|---|---|
 | `ai-tool-viral-post-writer` | Chinese X/Twitter viral copywriting for AI tools and GitHub projects | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) |
+| `youtube-thumbnail-producer-codex-v4` | Chinese YouTube title and thumbnail production workflow | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) |
 | `seedance-storyboard-prompt` | Seedance storyboard prompts, pad-image prompts, diagnostics, and revisions | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) |
 | `pdf` | PDF reading, creation, rendering, and layout validation | [SKILL.md](./pdf/SKILL.md) |
 | `playwright` | Browser automation through Playwright CLI | [SKILL.md](./playwright/SKILL.md) |
@@ -38,7 +39,7 @@ bash setup.sh
 Install only one skill:
 
 ```bash
-bash setup.sh ai-tool-viral-post-writer seedance-storyboard-prompt
+bash setup.sh ai-tool-viral-post-writer youtube-thumbnail-producer-codex-v4
 ```
 
 Manual install:
@@ -47,6 +48,7 @@ Manual install:
 git clone https://github.com/illria/Eianun_skills.git
 mkdir -p ~/.codex/skills
 cp -R Eianun_skills/ai-tool-viral-post-writer ~/.codex/skills/
+cp -R Eianun_skills/youtube-thumbnail-producer-codex-v4 ~/.codex/skills/
 cp -R Eianun_skills/seedance-storyboard-prompt ~/.codex/skills/
 ```
 
@@ -76,6 +78,13 @@ Update the case library:
 ```text
 $ai-tool-viral-post-writer 更新素材库：
 paste a case here
+```
+
+YouTube thumbnail workflow:
+
+```text
+$youtube-thumbnail-producer 这个标题做一张中文 YouTube 缩略图：
+paste title here
 ```
 
 Seedance storyboard prompts:

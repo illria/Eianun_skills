@@ -1,0 +1,5 @@
+interface:
+  display_name: YouTube Thumbnail Producer
+  short_description: Generate Chinese YouTube title candidates, direct title-to-thumbnail prompts, and editable source packs.
+  icon: image
+  primary_color: '#15b8a6'

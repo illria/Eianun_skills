@@ -6,7 +6,7 @@
 
 #### 个人 Agent Skills 集合
 
-[![Skills](https://img.shields.io/badge/Skills-4-10B981?style=for-the-badge)](#-skills)
+[![Skills](https://img.shields.io/badge/Skills-5-10B981?style=for-the-badge)](#-skills)
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-3B82F6?style=for-the-badge)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](./LICENSE)
 
@@ -14,13 +14,14 @@
 
 这个仓库用于存放可直接安装到 Codex、Claude Code、OpenCode、OpenClaw、Hermes 等 Agent 环境里的 Skills。
 
-当前包含文案生成、Seedance 分镜提示词、PDF 处理、Playwright 浏览器自动化等个人常用 Skills。每个 Skill 都是独立目录，可以单独安装，也可以一次性安装全部。
+当前包含文案生成、YouTube 缩略图、Seedance 分镜提示词、PDF 处理、Playwright 浏览器自动化等个人常用 Skills。每个 Skill 都是独立目录，可以单独安装，也可以一次性安装全部。
 
 ---
 
 ## 能帮你做什么
 
 - **AI 工具文案**：输入 GitHub 仓库、产品链接或工具说明，输出中文区可发的推文。
+- **YouTube 缩略图**：从标题/选题生成中文 YouTube 标题候选、缩略图 brief、Codex 生图 prompt 和修订方案。
 - **Seedance 分镜**：把故事、脚本、反馈转成可复制的视频生成分镜提示词。
 - **PDF 工作流**：读写、生成、渲染和校验 PDF，优先做视觉复核。
 - **Playwright 自动化**：用真实浏览器做页面验证、截图、表单操作和调试。
@@ -33,6 +34,7 @@
 | Skill | 一句话 | 入口 |
 |---|---|---|
 | `ai-tool-viral-post-writer` | 中文 X/Twitter AI 工具爆款文案生成与案例库维护 | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) |
+| `youtube-thumbnail-producer-codex-v4` | 中文 YouTube 标题与高点击缩略图生成工作流 | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) |
 | `seedance-storyboard-prompt` | Seedance 分镜提示词、垫图描述、反馈诊断与修订 | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) |
 | `pdf` | PDF 阅读、生成、渲染与版式校验 | [SKILL.md](./pdf/SKILL.md) |
 | `playwright` | 通过 Playwright CLI 控制真实浏览器 | [SKILL.md](./playwright/SKILL.md) |
@@ -58,7 +60,7 @@ bash setup.sh
 只安装指定 Skill：
 
 ```bash
-bash setup.sh ai-tool-viral-post-writer seedance-storyboard-prompt
+bash setup.sh ai-tool-viral-post-writer youtube-thumbnail-producer-codex-v4
 ```
 
 ### 方式 2：手动安装
@@ -67,6 +69,7 @@ bash setup.sh ai-tool-viral-post-writer seedance-storyboard-prompt
 git clone https://github.com/illria/Eianun_skills.git
 mkdir -p ~/.codex/skills
 cp -R Eianun_skills/ai-tool-viral-post-writer ~/.codex/skills/
+cp -R Eianun_skills/youtube-thumbnail-producer-codex-v4 ~/.codex/skills/
 cp -R Eianun_skills/seedance-storyboard-prompt ~/.codex/skills/
 ```
 
@@ -133,6 +136,23 @@ $ai-tool-viral-post-writer 更新素材库：
 - [素材库](./ai-tool-viral-post-writer/references/case_library.md)
 - [事实与风险边界](./ai-tool-viral-post-writer/references/claim_safety.md)
 - [配图策略](./ai-tool-viral-post-writer/references/visual_brief.md)
+
+### youtube-thumbnail-producer-codex-v4
+
+> 为中文 YouTube 内容生成标题候选、缩略图 brief、生图 prompt 和修订方案。
+
+适合：
+
+- 中文 YouTube 教程/评测/工具类缩略图
+- 从选题或笔记生成标题候选
+- 从标题直接生成缩略图方案
+- Codex 内置图片生成 prompt
+- 缩略图反馈修订
+
+入口：
+
+- [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md)
+- [README](./youtube-thumbnail-producer-codex-v4/README.md)
 
 ### seedance-storyboard-prompt
 

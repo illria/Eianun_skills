@@ -1,4 +1,6 @@
 # Eianun Skills
 #
-# The current ai-tool-viral-post-writer skill has no mandatory third-party
-# runtime dependencies. It is primarily instruction/reference driven.
+# Most skills are instruction/reference driven. Optional local thumbnail
+# utilities use Pillow.
+
+pillow>=10.0.0
