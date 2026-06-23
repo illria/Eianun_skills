@@ -10,6 +10,7 @@ from pathlib import Path
 
 DEFAULT_DIRS = [
     "docs",
+    "seedance-storyboard-prompt/docs",
     "seedance-storyboard-prompt/references",
     "references",
 ]

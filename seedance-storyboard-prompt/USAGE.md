@@ -142,7 +142,10 @@ $seedance-storyboard-prompt
 
 整合时会优先更新：
 
-- `references/integrated-sources.md`
+- `docs/MANIFEST.md`
+- `docs/sources/`
+- `docs/web/`
+- `docs/cases/`
 - `references/source-library-workflow.md`
 - `references/seedance-2-multimodal.md`
 - 和已有的 evidence / output / troubleshooting 规则

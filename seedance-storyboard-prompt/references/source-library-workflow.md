@@ -4,14 +4,14 @@ Use this reference when the user asks to add documents/webpages/cases, asks what
 
 ## Purpose
 
-The Seedance workflow should behave like a project knowledge base:
+The Seedance workflow should behave like a runnable project knowledge base. This skill package includes a `docs/` skeleton copied from the runnable Seedance package so it can be sent to another Codex environment and used directly.
 
 - `docs/MANIFEST.md`: source index and priority map.
 - `docs/sources/`: official docs, PDFs, DOCX/TXT/MD exports, product guides, FAQ.
 - `docs/web/`: saved webpage text or manually copied web content.
 - `docs/cases/`: failed generations, before/after prompt examples, diagnosis reports.
 
-When the current repository is only a skill package and these folders do not exist, use this reference as the behavior model. Do not pretend files were saved unless they were actually written.
+When these folders exist inside the skill package, treat them as bundled source files. When the user is working in a separate project that has its own `docs/`, prefer the project docs for project-specific evidence.
 
 ## Knowledge lookup order
 
@@ -21,7 +21,9 @@ For source-backed Seedance work, inspect information in this order:
 2. current project source index if available: `docs/MANIFEST.md`
 3. project sources: `docs/sources/`, `docs/web/`, `docs/cases/`
 4. skill references:
-   - `references/integrated-sources.md`
+   - `docs/MANIFEST.md`
+   - `docs/NATURAL_WORKFLOW.md`
+   - `docs/sources/`, `docs/web/`, `docs/cases/`
    - `references/seedance-2-multimodal.md`
    - `references/evidence-mode.md`
    - `references/troubleshooting.md`
