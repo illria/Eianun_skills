@@ -1,0 +1,4 @@
+---
+interface:
+  display_name: "Seedance Storyboard Prompt"
+  short_description: "Convert stories and scripts into Seedance-ready storyboard prompts, pad-image prompts, and revised video prompts."

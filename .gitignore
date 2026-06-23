@@ -5,12 +5,7 @@ out/
 *.key
 *.pem
 
-# Generated images and archives
-*.png
-*.jpg
-*.jpeg
-*.webp
-*.gif
+# Generated archives
 *.zip
 
 # Python

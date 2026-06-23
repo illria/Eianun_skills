@@ -2,7 +2,7 @@
 # Eianun Skills - local installer
 # Usage:
 #   bash setup.sh
-#   bash setup.sh ai-tool-viral-post-writer
+#   bash setup.sh ai-tool-viral-post-writer seedance-storyboard-prompt
 
 set -euo pipefail
 
@@ -18,7 +18,7 @@ error() { echo -e "${RED}[✗]${NC} $*"; }
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_DIR="${CODEX_HOME:-$HOME/.codex}/skills"
 
-SKILLS=("ai-tool-viral-post-writer")
+SKILLS=("ai-tool-viral-post-writer" "seedance-storyboard-prompt" "pdf" "playwright")
 
 if [[ $# -gt 0 ]]; then
   SKILLS=("$@")
