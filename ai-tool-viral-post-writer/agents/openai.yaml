@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Tool Viral Post Writer"
+  short_description: "Generate Chinese X/Twitter posts for AI tools and learn from viral examples."
+  icon: "✍️"
+  brand_color: "#2563EB"
