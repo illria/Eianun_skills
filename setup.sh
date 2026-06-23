@@ -18,7 +18,7 @@ error() { echo -e "${RED}[✗]${NC} $*"; }
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_DIR="${CODEX_HOME:-$HOME/.codex}/skills"
 
-SKILLS=("ai-tool-viral-post-writer" "youtube-thumbnail-producer-codex-v4" "seedance-storyboard-prompt" "pdf" "playwright")
+SKILLS=("ai-tool-viral-post-writer" "youtube-thumbnail-producer-codex-v4" "seedance-storyboard-prompt")
 
 if [[ $# -gt 0 ]]; then
   SKILLS=("$@")

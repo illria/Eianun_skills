@@ -6,7 +6,7 @@
 
 #### 个人 Agent Skills 集合
 
-[![Skills](https://img.shields.io/badge/Skills-5-10B981?style=for-the-badge)](#-skills)
+[![Skills](https://img.shields.io/badge/Skills-3-10B981?style=for-the-badge)](#-skills)
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-3B82F6?style=for-the-badge)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](./LICENSE)
 
@@ -14,7 +14,7 @@
 
 这个仓库用于存放可直接安装到 Codex、Claude Code、OpenCode、OpenClaw、Hermes 等 Agent 环境里的 Skills。
 
-当前包含文案生成、YouTube 缩略图、Seedance 分镜提示词、PDF 处理、Playwright 浏览器自动化等个人常用 Skills。每个 Skill 都是独立目录，可以单独安装，也可以一次性安装全部。
+当前包含文案生成、YouTube 缩略图、Seedance 分镜提示词等个人常用 Skills。每个 Skill 都是独立目录，可以单独安装，也可以一次性安装全部。
 
 ---
 
@@ -23,8 +23,6 @@
 - **AI 工具文案**：输入 GitHub 仓库、产品链接或工具说明，输出中文区可发的推文。
 - **YouTube 缩略图**：从标题/选题生成中文 YouTube 标题候选、缩略图 brief、Codex 生图 prompt 和修订方案。
 - **Seedance 分镜**：把故事、脚本、反馈转成可复制的视频生成分镜提示词。
-- **PDF 工作流**：读写、生成、渲染和校验 PDF，优先做视觉复核。
-- **Playwright 自动化**：用真实浏览器做页面验证、截图、表单操作和调试。
 - **素材库维护**：通过 `case_library.md` 沉淀可复用文案结构。
 
 ---
@@ -36,8 +34,6 @@
 | `ai-tool-viral-post-writer` | 中文 X/Twitter AI 工具爆款文案生成与案例库维护 | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) |
 | `youtube-thumbnail-producer-codex-v4` | 中文 YouTube 标题与高点击缩略图生成工作流 | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) |
 | `seedance-storyboard-prompt` | Seedance 分镜提示词、垫图描述、反馈诊断与修订 | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) |
-| `pdf` | PDF 阅读、生成、渲染与版式校验 | [SKILL.md](./pdf/SKILL.md) |
-| `playwright` | 通过 Playwright CLI 控制真实浏览器 | [SKILL.md](./playwright/SKILL.md) |
 
 ---
 
@@ -170,34 +166,6 @@ $ai-tool-viral-post-writer 更新素材库：
 
 - [SKILL.md](./seedance-storyboard-prompt/SKILL.md)
 - [使用指南](./seedance-storyboard-prompt/USAGE_GUIDE.md)
-
-### pdf
-
-> 处理 PDF 内容、生成 PDF，并通过渲染检查版式。
-
-适合：
-
-- PDF 阅读和提取
-- PDF 生成
-- 页面渲染校验
-- 报告、文档、表格类 PDF 处理
-
-入口：[SKILL.md](./pdf/SKILL.md)
-
-### playwright
-
-> 用 Playwright CLI 驱动真实浏览器完成网页操作、截图和调试。
-
-适合：
-
-- 本地网页验证
-- 表单自动填写
-- 截图和视觉检查
-- 页面调试、数据抽取
-
-入口：[SKILL.md](./playwright/SKILL.md)
-
----
 
 ## 开发与校验
 
