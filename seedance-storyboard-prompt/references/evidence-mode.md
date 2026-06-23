@@ -18,7 +18,7 @@ Before answering, inspect available information sources in this priority order:
    - `docs/web/`
    - `docs/cases/`
 4. Bundled skill references.
-   - `references/source-manifest.md` for already integrated source provenance.
+   - `references/integrated-sources.md` for already integrated source notes.
    - `references/source-library-workflow.md` for knowledge-base behavior.
    - `references/seedance-2-multimodal.md` for Seedance 2.0 multimodal rules.
 5. Web search only when the user requests latest public documentation or the fact may have changed.

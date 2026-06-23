@@ -21,7 +21,7 @@ For source-backed Seedance work, inspect information in this order:
 2. current project source index if available: `docs/MANIFEST.md`
 3. project sources: `docs/sources/`, `docs/web/`, `docs/cases/`
 4. skill references:
-   - `references/source-manifest.md`
+   - `references/integrated-sources.md`
    - `references/seedance-2-multimodal.md`
    - `references/evidence-mode.md`
    - `references/troubleshooting.md`

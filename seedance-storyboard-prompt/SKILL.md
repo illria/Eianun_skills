@@ -23,7 +23,7 @@ When the user says things like `这个文档加进去`, `这个网页也参考`,
 
 Before giving source-backed advice, inspect available materials first. Separate recommendations into 【资料明确依据】, 【当前内容依据】, 【AI 推理判断】, and 【经验优化建议】. Never present reasoning or experience as document facts.
 
-For details and examples, consult `references/natural-task-understanding.md`. For source-library behavior and integrated source provenance, consult `references/source-library-workflow.md` and `references/source-manifest.md`.
+For details and examples, consult `references/natural-task-understanding.md`. For source-library behavior and integrated source notes, consult `references/source-library-workflow.md` and `references/integrated-sources.md`.
 
 ## Default Workflow
 
@@ -47,8 +47,8 @@ Evidence mode workflow:
 
 - `references/natural-task-understanding.md`: natural-language task understanding and autonomous judgment workflow.
 - `references/evidence-mode.md`: evidence-backed diagnosis format and source labeling.
-- `references/source-library-workflow.md`: how to add/search project sources, update source manifests, and keep final prompts self-contained.
-- `references/source-manifest.md`: distilled index of user-provided Seedance source materials already integrated into this skill.
+- `references/source-library-workflow.md`: how to add/search project sources, update integrated source notes, and keep final prompts self-contained.
+- `references/integrated-sources.md`: public-facing summary of Seedance source materials already distilled into this skill.
 - `references/seedance-2-multimodal.md`: Seedance 2.0 multimodal input limits, reference-role writing, and multimodal task patterns.
 - `references/output-formats.md`: storyboard table and final prompt structures.
 - `references/pad-image-prompts.md`: pad-image extraction format.
@@ -118,7 +118,7 @@ In this mode:
 - Compare with existing `references/` and integrate only reusable, non-duplicative rules.
 - Do not overwrite existing references unless the user explicitly asks.
 - Do not add raw large archives, generated media, or full manuals when a distilled reference is enough.
-- Update `references/source-manifest.md` when a new source family is integrated.
+- Update `references/integrated-sources.md` when a new source family is integrated.
 - Report what was integrated, what was intentionally not copied, and which files changed.
 - When working in a project knowledge base rather than this skill repository, use `scripts/ingest_file.py`, `scripts/ingest_url.py`, or `scripts/search_docs.py` as support tools if appropriate.
 

@@ -7,7 +7,7 @@
 - `USAGE.md`：快速使用说明
 - `USAGE_GUIDE.md`：使用指南
 - `assets/eianun-watermark.png`：作者水印图
-- `references/source-manifest.md`：已整合资料来源索引
+- `references/integrated-sources.md`：已整合资料说明
 - `references/source-library-workflow.md`：资料库 / MANIFEST / 证据检索工作流
 - `references/seedance-2-multimodal.md`：Seedance 2.0 多模态能力摘要
 

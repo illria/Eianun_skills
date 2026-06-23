@@ -55,7 +55,7 @@ For Seedance prompt diagnosis, generation feedback, or claims about best practic
 2. Nearby scenes or previous/next shots if provided.
 3. Uploaded files or project docs.
 4. `docs/MANIFEST.md`, `docs/sources/`, `docs/web/`, `docs/cases/` when working in a Codex-style project.
-5. Bundled references, especially `source-manifest.md`, `source-library-workflow.md`, and `seedance-2-multimodal.md` when the task relates to source provenance, docs ingestion, or Seedance 2.0 multimodal behavior.
+5. Bundled references, especially `integrated-sources.md`, `source-library-workflow.md`, and `seedance-2-multimodal.md` when the task relates to source provenance, docs ingestion, or Seedance 2.0 multimodal behavior.
 6. Web search only when the user asks for current public documentation or the fact may have changed.
 
 Every important recommendation should be labeled as:
