@@ -6,7 +6,7 @@
 
 #### 个人 Agent Skills 集合
 
-[![Skills](https://img.shields.io/badge/Skills-3-10B981?style=for-the-badge)](#-skills)
+[![Skills](https://img.shields.io/badge/Skills-4-10B981?style=for-the-badge)](#-skills)
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-3B82F6?style=for-the-badge)](https://agentskills.io)
 [![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](./LICENSE)
 
@@ -14,7 +14,7 @@
 
 这个仓库用于存放可直接安装到 Codex、Claude Code、OpenCode、OpenClaw、Hermes 等 Agent 环境里的 Skills。
 
-当前包含文案生成、YouTube 缩略图、Seedance 分镜提示词等个人常用 Skills。每个 Skill 都是独立目录，可以单独安装，也可以一次性安装全部。
+当前包含文案生成、YouTube 缩略图、Seedance 分镜提示词、必剪字幕提取等个人常用 Skills。每个 Skill 都是独立目录，可以单独安装，也可以一次性安装全部。
 
 ---
 
@@ -23,6 +23,7 @@
 - **AI 工具文案**：输入 GitHub 仓库、产品链接或工具说明，输出中文区可发的推文。
 - **YouTube 缩略图**：从标题/选题生成中文 YouTube 标题候选、缩略图 brief、Codex 生图 prompt 和修订方案。
 - **Seedance 分镜**：把故事、脚本、反馈转成可复制的视频生成分镜提示词。
+- **必剪字幕提取**：从必剪/Bcut 最新草稿导出普通版和增强版双 SRT 字幕。
 - **素材库维护**：通过 `case_library.md` 沉淀可复用文案结构。
 
 ---
@@ -34,6 +35,7 @@
 | `ai-tool-viral-post-writer` | 中文 X/Twitter AI 工具爆款文案生成与案例库维护 | [SKILL.md](./ai-tool-viral-post-writer/SKILL.md) · [使用说明](./ai-tool-viral-post-writer/USAGE.md) |
 | `youtube-thumbnail-producer-codex-v4` | 中文 YouTube 标题与高点击缩略图生成工作流 | [SKILL.md](./youtube-thumbnail-producer-codex-v4/SKILL.md) · [使用说明](./youtube-thumbnail-producer-codex-v4/USAGE.md) |
 | `seedance-storyboard-prompt` | Seedance 分镜提示词、垫图描述、反馈诊断与修订 | [SKILL.md](./seedance-storyboard-prompt/SKILL.md) · [使用说明](./seedance-storyboard-prompt/USAGE.md) |
+| `bcut-subtitle-extractor` | 提取必剪/Bcut 草稿字幕并导出普通版与增强版 SRT | [SKILL.md](./bcut-subtitle-extractor/SKILL.md) · [命令参考](./bcut-subtitle-extractor/references/api_reference.md) |
 
 ---
 
@@ -56,7 +58,7 @@ bash setup.sh
 只安装指定 Skill：
 
 ```bash
-bash setup.sh ai-tool-viral-post-writer youtube-thumbnail-producer-codex-v4
+bash setup.sh ai-tool-viral-post-writer youtube-thumbnail-producer-codex-v4 bcut-subtitle-extractor
 ```
 
 ### 方式 2：手动安装
@@ -67,6 +69,7 @@ mkdir -p ~/.codex/skills
 cp -R Eianun_skills/ai-tool-viral-post-writer ~/.codex/skills/
 cp -R Eianun_skills/youtube-thumbnail-producer-codex-v4 ~/.codex/skills/
 cp -R Eianun_skills/seedance-storyboard-prompt ~/.codex/skills/
+cp -R Eianun_skills/bcut-subtitle-extractor ~/.codex/skills/
 ```
 
 ### 方式 3：Agent 内安装
@@ -105,6 +108,12 @@ $ai-tool-viral-post-writer 拆解学习：
 ```text
 $ai-tool-viral-post-writer 更新素材库：
 这里粘贴一段你想沉淀的案例
+```
+
+提取最新必剪字幕：
+
+```text
+$bcut-subtitle-extractor 提取最新必剪字幕生成 SRT
 ```
 
 ---
@@ -169,6 +178,24 @@ $ai-tool-viral-post-writer 更新素材库：
 - [SKILL.md](./seedance-storyboard-prompt/SKILL.md)
 - [使用说明](./seedance-storyboard-prompt/USAGE.md)
 - [使用指南](./seedance-storyboard-prompt/USAGE_GUIDE.md)
+
+### bcut-subtitle-extractor
+
+> 从必剪/Bcut 桌面端草稿中提取字幕，并默认生成普通版与增强版两个标准 SRT 文件。
+
+适合：
+
+- 提取最新必剪草稿字幕
+- 将 `.json` / `.bjson` 草稿字幕转换为 SRT
+- 保留原始时间轴导出普通版字幕
+- 去除逗号、句号、感叹号和常见口语语气词
+- 修复字幕导入失败或定位草稿字幕文件
+
+入口：
+
+- [SKILL.md](./bcut-subtitle-extractor/SKILL.md)
+- [命令参考](./bcut-subtitle-extractor/references/api_reference.md)
+- [草稿结构说明](./bcut-subtitle-extractor/references/bcut-draft-notes.md)
 
 ## 开发与校验
 

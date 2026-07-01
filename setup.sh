@@ -2,7 +2,7 @@
 # Eianun Skills - local installer
 # Usage:
 #   bash setup.sh
-#   bash setup.sh ai-tool-viral-post-writer youtube-thumbnail-producer-codex-v4
+#   bash setup.sh ai-tool-viral-post-writer youtube-thumbnail-producer-codex-v4 bcut-subtitle-extractor
 
 set -euo pipefail
 
@@ -18,7 +18,7 @@ error() { echo -e "${RED}[✗]${NC} $*"; }
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_DIR="${CODEX_HOME:-$HOME/.codex}/skills"
 
-SKILLS=("ai-tool-viral-post-writer" "youtube-thumbnail-producer-codex-v4" "seedance-storyboard-prompt")
+SKILLS=("ai-tool-viral-post-writer" "youtube-thumbnail-producer-codex-v4" "seedance-storyboard-prompt" "bcut-subtitle-extractor")
 
 if [[ $# -gt 0 ]]; then
   SKILLS=("$@")

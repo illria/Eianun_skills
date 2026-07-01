@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bcut Subtitle Extractor"
+  short_description: "Extract 必剪/Bcut draft captions and export clean SRT files."
+  icon: "🎬"
